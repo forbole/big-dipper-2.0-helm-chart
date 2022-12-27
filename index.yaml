@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  bigdipper:
+  - apiVersion: v2
+    appVersion: 2.0.0
+    created: "2022-12-27T08:17:40.057780295Z"
+    description: A Helm chart for Kubernetes
+    digest: fb3567bea301b351415d1abcc9ac902cd7400a1557d3015770d0affeaa8b390a
+    name: bigdipper
+    type: application
+    urls:
+    - https://forbole.github.io/big-dipper-2.0-helm-chart/bigdipper-0.1.0.tgz
+    version: 0.1.0
+generated: "2022-12-27T08:17:40.052254906Z"
