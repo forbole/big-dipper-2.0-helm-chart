@@ -14,7 +14,7 @@ nameOverride: ""
 fullnameOverride: ""
 
 podAnnotations: {}
-affinity: {}
+podAntiAffinityPreset: false
 
 service:
   type: ClusterIP

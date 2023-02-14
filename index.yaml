@@ -3,9 +3,9 @@ entries:
   bigdipper:
   - apiVersion: v2
     appVersion: 2.0.0
-    created: "2023-02-14T00:42:31.874812641Z"
+    created: "2023-02-14T01:30:35.149111548Z"
     description: A Helm chart for Kubernetes
-    digest: 3910086ee117ee977843d1bb2a43ae7a8be4b49cc5b263c26c8860b413dceb9f
+    digest: dd3a6d2c31e2aee8796cccf0161594e91307bffb21be82fbede097043b46fe05
     name: bigdipper
     type: application
     urls:
@@ -13,7 +13,7 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: 2.0.0
-    created: "2023-02-14T00:42:31.873428656Z"
+    created: "2023-02-14T01:30:35.147353734Z"
     description: A Helm chart for Kubernetes
     digest: fb3567bea301b351415d1abcc9ac902cd7400a1557d3015770d0affeaa8b390a
     name: bigdipper
@@ -21,4 +21,4 @@ entries:
     urls:
     - https://forbole.github.io/bigdipper-2.0-helm-chart/bigdipper-0.1.0.tgz
     version: 0.1.0
-generated: "2023-02-14T00:42:31.87163858Z"
+generated: "2023-02-14T01:30:35.145017457Z"

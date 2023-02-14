@@ -5,6 +5,7 @@ metadata:
   labels:
     {{- include "big-dipper.labels" . | nindent 4 }}
 spec:
+  replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
       {{- include "big-dipper.selectorLabels" . | nindent 6 }}
@@ -25,7 +26,15 @@ spec:
             - name: http
               containerPort: 3000
               protocol: TCP
-      {{- with .Values.affinity }}
+      {{- if .Values.podAntiAffinityPreset }}
       affinity:
-        {{- toYaml . | nindent 8 }}
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            - labelSelector:
+                matchExpressions:
+                - key: app.kubernetes.io/instance
+                  operator: In
+                  values: 
+                  -  {{ .Release.Name }}
+              topologyKey: "kubernetes.io/hostname"
       {{- end }}
