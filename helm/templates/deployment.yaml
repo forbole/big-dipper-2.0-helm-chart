@@ -26,6 +26,8 @@ spec:
             - name: http
               containerPort: 3000
               protocol: TCP
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
       {{- if .Values.podAntiAffinityPreset }}
       affinity:
         podAntiAffinity:
