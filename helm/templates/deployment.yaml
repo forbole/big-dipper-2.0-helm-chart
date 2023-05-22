@@ -26,16 +26,16 @@ spec:
             - name: http
               containerPort: 3000
               protocol: TCP
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
           {{- if .Values.readinessProbe }}
           readinessProbe:
-            {{- toYaml .Values.readinessProbe | nindent 6 }}
+            {{- toYaml .Values.readinessProbe | nindent 12 }}
           {{- end }}
           {{- if .Values.livenessProbe }}
           livenessProbe:
-            {{- toYaml .Values.livenessProbe | nindent 6 }}
+            {{- toYaml .Values.livenessProbe | nindent 12 }}
           {{- end }}
-          resources:
-            {{- toYaml .Values.resources | nindent 12 }}
       {{- if .Values.podAntiAffinityPreset }}
       affinity:
         podAntiAffinity:
